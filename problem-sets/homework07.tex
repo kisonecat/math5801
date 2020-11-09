@@ -1,0 +1,105 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\newcommand{\TT}{\mathscr{T}}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent The exercises below should be handed in on \textit{Monday,
+  October 19, 2015}.  By providing well-written solutions to the
+problems, you may earn up \textbf{six points.}  I encourage you to
+\textbf{work together} when solving the problems, but please write
+your answers independently and include the names of your
+co-conspirators.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Compact and closed]
+
+  Suppose $X$ is a compact topological space, and $K \subset X$ is a
+  compact subset.  Is $K$ necessarily closed?  Is there a natural
+  condition on $X$ which guarantees that $K$ is closed?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Compacts and unions]
+
+  Suppose $A$ and $B$ are compact subsets of a topological space $X$.
+  Is it necessarily the case that $A \cup B$ is compact?  If so, prove
+  it; if not, find a counterexample.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Compact metric spaces]
+
+  Suppose $(X,d)$ is a metric space, and suppose for all
+  $\epsilon > 0$ that $X$ can be covered by finitely many open balls
+  of radius $\epsilon$.   Must $X$ be compact?
+  
+\end{problem}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Compact spaces and products]
+
+  Suppose $X$ and $Y$ are compact topological spaces.  Prove that
+  $X \times Y$ is compact.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Compact versus sequentially compact]
+
+  Let $I = [0,1]$.  Then the space $X = \{0,1\}^I$ is compact being
+  the product of compact spaces.  Find a sequence in $X$ which does
+  not converge.
+
+  (\textit{Hint:} define $a_n(x)$ to be the $n$th binary bit of $x$.)
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Locally compact]
+
+  Suppose $X$ and $Y$ are Hausdorff spaces, and suppose $X$ is locally
+  compact (which for right now will mean that every point of $x$ is
+  contained in some open set with compact closure).  If $f : X \to Y$
+  is a continuous, open, and onto function, then is $Y$ locally
+  compact?
+  
+\end{problem}
+
+\end{document}

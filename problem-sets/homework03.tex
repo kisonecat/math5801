@@ -1,0 +1,122 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\newcommand{\TT}{\mathscr{T}}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent The exercises below should be handed in on \textit{Monday, September
+  21, 2015}.  By providing well-written solutions to the problems, you
+may earn up \textbf{six points.}  I encourage you to \textbf{work
+  together} when solving the problems, but please write your answers
+independently and include the names of your co-conspirators.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Products and subspaces]
+
+  Suppose $X$ and $Y$ are topological spaces and $A \subset X$ and $B \subset Y$.
+
+  Since $A \times B \subset X \times Y$, it is possible to define a
+  topology on $A \times B$ as a subspace of $X \times Y$.  How does
+  this relate to the topology on $A \times B$ produced by regarding
+  $A$ as a subspace of $X$, regarding $B$ as a subspace of $Y$, and
+  then considering the product topology $A \times B$?  Justify the
+  relationship you discover.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Homeomorphisms and products]
+
+  Suppose $X$ and $Y$ are topological spaces.
+
+  Is there a homeomorphism between $X \times Y$ and $Y \times X$?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Homeomorphisms and subspaces]
+
+  Suppose $\RR$ is given its standard topology, and $\RR - \{0\}$ is
+  given the topology it inherits as a subspace of $\RR$.
+
+  Is there a homeomorphism between $\RR - \{0\}$ and $\RR$?  
+
+  Is there a homeomorphism between $\left(\RR - \{0\}\right) \times \left(\RR - \{0\}\right)$ and $\RR \times \left(\RR - \{0\}\right)$?  
+
+\end{problem}
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Open maps]
+
+  A function $f : X \to Y$ is a \textit{continuous map} if whenever
+  $U$ is open in $Y$, then $f^{-1}(U)$ is open in $X$.  A function
+  $f : X \to Y$ is an \textit{open map} if whenever $U$ is open in
+  $X$, then $f(U)$ is open in $Y$.
+
+  Is the projection $\pi_1 : X \times Y \to X$ a continuous map?  An
+  open map.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Order topology and products]
+
+  Define $X = (\RR,\mathcal{P}(\RR))$, i.e., $X$ is the set $\RR$
+  endowed with the discrete topology.  Let $Y$ be $\RR$ given the
+  order topology, and let $Y_2 = \RR \times \RR$ with the order
+  topology on the lexicographic ordering.
+
+  Relate $Y_2$ and $X \times Y$ and $Y \times Y$.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Order topology and subspaces]
+
+
+  Let $Y$ be $\RR$ given the order topology, and let $I = [0,1]$ given
+  the topology it inherits as a subspace of $Y$.
+
+  How does $I \times I$, with the product topology, relate to the
+  topology that $I \times I$ inherits as a subspace of $\RR^2$ with
+  the order topology coming from the lexicographic ordering on
+  $\RR^2$?
+
+\end{problem}
+
+
+\end{document}

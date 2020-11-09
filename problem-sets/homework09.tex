@@ -1,0 +1,92 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\newcommand{\TT}{\mathscr{T}}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent The exercises below should be handed in on \textit{Monday,
+  November 23, 2015}.  By providing well-written solutions to the
+problems, you may earn up \textbf{six points.}  I encourage you to
+\textbf{work together} when solving the problems, but please write
+your answers independently.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Suppose $a \in A \subset X$ and that there is a continuous map
+  $f : X \to A$ so that $f |_{A}$ is the identity.  Is the induced homomorphism of groups
+  \[
+  \pi_1 f : \pi_1(X,a) \to \pi_1(A,a)\]
+  an injection?  A surjection?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Define $S^1 = \{ z \in \mathbb{C} : |z| = 1\}$ and consider the
+  function $f : S^1 \to S^1$ defined by $f(z) = z^n$ for
+  $n \in \mathbb{Z}$.  Describe the map
+  \[
+  \pi_1 f : \pi_1(S^1) \to \pi_1(S^1).
+  \]
+  What base point am I using?  Does it matter?
+
+\end{problem}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Let $T = S^1 \times S^1$.  Compute $\pi_1(T,\star)$.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Let $\ZZ$ be endowed with the discrete topology.  The map
+  $f : X \times \ZZ \to X$ is given by projection onto the first
+  factor; is $f$ a covering map?
+
+\end{problem}
+
+
+
+
+\end{document}

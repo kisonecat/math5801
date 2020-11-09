@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2909"
+   height="81.250000"
+   width="125.00000"
+   y="0.00000000"
+   x="0.00000000"
+   version="1.0">
+  <defs
+     id="defs3" />
+  <g
+     id="layer1">
+    <path
+       id="path2921"
+       style="fill:#99ff99;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#000000;stroke-width:2.0000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-opacity:1.0000000"
+       d="M 40.307080,17.859431 C 40.307080,17.859431 79.592797,6.4308605 104.59279,20.002289 C 129.59279,33.573717 98.164222,45.716577 112.44993,58.573717 C 126.73564,71.430857 102.44993,84.288007 93.878505,66.430857 C 85.307075,48.573717 76.735647,25.002289 67.449937,30.716574 C 58.164227,36.430860 72.449937,56.430857 63.878507,57.859427 C 55.307077,59.288007 47.449937,40.716574 40.307080,38.573717 C 33.164223,36.430860 30.307080,64.288007 24.592794,63.573717 C 18.878509,62.859427 1.7356507,17.145146 12.449937,10.002289 C 23.164223,2.8594314 28.878509,20.002289 40.307080,17.859431 z " />
+    <path
+       id="path10533"
+       style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:2.0000000 1.0000000 ;stroke-dashoffset:0.00000000;stroke-opacity:1.0000000"
+       d="M 21.284791,45.734392 C 21.284791,45.734392 31.463362,29.877249 43.463362,26.877249 C 55.463362,23.877249 76.963362,22.377249 85.963362,26.377249 C 94.963362,30.377249 106.46336,62.877249 106.46336,62.877249" />
+    <path
+       id="path11293"
+       style="fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:2.0000000 1.0000000 ;stroke-dashoffset:0.00000000;stroke-opacity:1.0000000"
+       transform="translate(-6.036638,-2.122751)"
+       d="M 28.500000 48.000000 A 1.5000000 1.5000000 0 1 1  25.500000,48.000000 A 1.5000000 1.5000000 0 1 1  28.500000 48.000000 z" />
+    <path
+       id="path12053"
+       style="fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:2.0000000 1.0000000 ;stroke-dashoffset:0.00000000;stroke-opacity:1.0000000"
+       transform="translate(79.46336,14.87725)"
+       d="M 28.500000 48.000000 A 1.5000000 1.5000000 0 1 1  25.500000,48.000000 A 1.5000000 1.5000000 0 1 1  28.500000 48.000000 z" />
+  </g>
+</svg>

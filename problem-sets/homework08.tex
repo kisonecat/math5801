@@ -1,0 +1,98 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\newcommand{\TT}{\mathscr{T}}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent The exercises below should be handed in on \textit{Monday,
+  November 9, 2015}.  By providing well-written solutions to the
+problems, you may earn up \textbf{six points.}  I encourage you to
+\textbf{work together} when solving the problems, but please write
+your answers independently.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Prove that a metrizable topological space is normal.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Suppose $X$ is a set with the order topology; show that $X$ is regular.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Prove that a regular Lindel\"of space is normal.
+
+\end{problem}
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Find a nonmetrizable topological space which is Hausdorff and
+  second-countable.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Suppose $X$ is a locally metrizable space (meaning each point has a
+  metrizable neighborhood).  Show (e.g., by invoking a powerful
+  theorem) that a compact locally metrizable Hausdorff space is
+  metrizable.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}
+
+  Find a locally metrizable, Lindel\"of Hausdorff space that is not metrizable.
+
+  % K topology on R
+
+\end{problem}
+
+
+
+\end{document}

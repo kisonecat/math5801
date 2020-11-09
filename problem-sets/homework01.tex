@@ -1,0 +1,153 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{\href{http://en.wikipedia.org/wiki/List_of_games_with_concealed_rules}{The only way to learn the game is to play the game.}}
+The following represents a \textit{lower bound} on the number of
+exercises you should be doing; the textbook is packed full of great
+exercises, so I encourage you to do as many as possible.
+
+The exercises below should be handed in on \textit{Monday, September
+  7, 2015}---which is a holiday, so feel free to drop them off a day
+later.  By providing well-written solutions to the problems, you may
+earn up \textbf{six points.}  I encourage you to \textbf{work
+  together} when solving the problems, but please write your answers
+independently and include the names of your collaborators.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Eliminating axioms]
+
+  Suppose $\sim $ is a relation so that for all $x$ and $y$ and $z$, we have
+  \begin{align*}
+    x \sim  y &\Leftrightarrow y \sim  x  \mbox{ and} \\
+    \left(x \sim  y\right) \wedge \left( y \sim  z \right) &\Rightarrow x \sim  z.
+  \end{align*}
+  We then prove that $x \sim x$ by noting that $x \sim y$ implies
+  $y \sim x$, and so $x \sim y \sim x$, and therefore by transitivity,
+  $x \sim x$.  So ``reflexivity'' is an unneeded axiom for equivalence
+  relations---or is it?  Explain why this is or is not a valid proof
+  of reflexivity from transitivity and symmetry.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Families of subsets]
+
+  Suppose $A$ consists of all arithmetic progressions in $\mathbb{Z}$,
+  i.e., an element of $A$ is a set 
+  \[
+  S_{m,b} = \{ mx + b \mid x \in \Z \},
+  \]
+  so $A = \{ S_{m,b} \mid m, b \in \Z \}$.
+  Is $A$ closed under unions?  Under intersections?  More precisely,
+  if $X, Y \in A$, then is $X \cup Y \in A$?  Is $X \cap Y \in A$?
+  Prove your conjectures or provide counterexamples.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Countability]
+
+  Let $X = \{0,1\}^{\omega}$, and define
+  \[
+  Y = \{ (x_1,x_2,\ldots) \in X \mid \mbox{all but finitely many of the $x_i$'s are 0} \}.
+  \]
+  Prove that $X$ and $Y$ are infinite by exhibiting a bijection
+  between $X$ and a proper subset of $X$ and between $Y$ and a proper
+  subset of $Y$.  Is there a bijection between $X$ and $Y$?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Rigs versus rings]
+
+  Suppose $X$ is a set and suppose $f$ is a bijection
+  \[
+  f : X \to \{ \varnothing \} \sqcup X \sqcup X^2.
+  \]
+  By $\sqcup$, I mean ``disjoint union''---emphasizing that $X$
+  and $X^2$ and $\{ \varnothing \}$ are meant to be disjoint.  Is there a bijection
+  \[
+  g : X \sqcup X^3 \to X^2 \sqcup X^4 \,?
+  \]
+  Can you describe $g$ using $f$?
+
+  %http://math.ucr.edu/home/baez/week202.html
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Order]
+
+  Regard $\{1,2,3\}$ and $\N$ as ordered sets using the usual
+  ordering, and consider
+  \begin{align*}
+    A &= \{1,2,3\} \times \{1,2,3\} \\
+    B &= \N \times \{1,2,3\} \\
+    C &= \{1,2,3\} \times \N \\
+    D &= \N \times \N
+  \end{align*}
+  with the lexicographic ordering.  Are there bijections between any
+  of the four sets $A$, $B$, $C$, and $D$?  Are there
+  \textit{order-preserving} bijections between any of these sets?
+
+\end{problem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Subsets]
+
+  A set $A$ of subsets of $\Z$ is \textit{good} if whenever
+  $S \subset \Z$ then either $S \in A$ or $\Z - S \in A$ but not both.  For example,
+  \[
+  A = \{ S \in \mathcal{P}(\Z) \mid 1 \in S \}
+  \]
+  is good.  A good set of subsets contains, for instance, either the
+  set of evens or the set of odds, but not both.
+
+  A set $A$ of subsets of $\Z$ is said to \textit{avoid finite sets} if
+  whenever $S$ is a finite set, then $S \not\in A$.  For example, 
+  \[
+  A = \{ \Z - \{ x \} \mid x \in \Z \}
+  \]
+  avoids finite sets---but it's not good, because neither the even
+  numbers nor the odd numbers are contained in $A$.
+
+  Is there a set of subsets of $\Z$ with both the above properties, i.e.,
+  a good set of subsets of $\Z$ which avoids finite sets?
+ 
+
+\end{problem}
+
+
+
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[12pt]{pset}
+
+\course{Math 5801}
+\author{Jim Fowler}
+\date{Autumn 2015}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows,chains,matrix,positioning,scopes}
+
+\makeatletter
+\tikzset{join/.code=\tikzset{after node path={%
+\ifx\tikzchainprevious\pgfutil@empty\else(\tikzchainprevious)%
+edge[every join]#1(\tikzchaincurrent)\fi}}}
+\makeatother
+
+\tikzset{>=stealth',every on chain/.append style={join},
+         every join/.style={->}}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{C}P}
+\newcommand{\RP}{\mathbb{R}P}
+
+\usepackage{enumerate}
+\usepackage{nopageno}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\newcommand{\TT}{\mathscr{T}}
+
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+
+\begin{document}
+\maketitle
+
+\noindent The exercises below should be handed in on \textit{Monday,
+  October 12, 2015}.  By providing well-written solutions to the
+problems, you may earn up \textbf{six points.}  I encourage you to
+\textbf{work together} when solving the problems, but please write
+your answers independently and include the names of your
+co-conspirators.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Irrationals and connectedness]
+
+  Is the topological space $\R - \Q$ connected?  Here $\R - \Q$ is
+  topologized as a subset of $\R$ with its standard topology.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Irrationals and the plane]
+
+  Is the topological space $\R^2 - \Q^2$ connected?  Here
+  $\R^2 - \Q^2$ is topologized as a subset of $\R^2$, which is itself
+  given the product topology of the standard topology on $\R$.
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Planes versus lines]
+
+  Is $\R$ homeomorphic to $\R^2$?  Why or why not?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Lines versus circles]
+
+  Is $[0,1]$ homeomorphic to $S^1 = \{ (x,y) \in \R^2 : x^2 + y^2 = 1 \}$?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[Graphs]
+
+  Suppose $X$ is a connected topological space, and $f : X \to Y$ is a
+  continuous map.  Is the graph of $f$, defined to be
+  \[
+  \{ (x,y) \in X \times Y : y = f(x) \} \subset X \times Y,
+  \]
+  connected?
+
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}[The topologist's sine curve]
+
+  Basically no course in point-set topology would be complete (pun
+  intended) without the following example.
+
+  Consider the function $f : \R \to \R$ given by
+  \[
+  f(x) = \begin{cases}
+    \sin \left( \frac{1}{x} \right) & \mbox{ if $x > 0$, } \\
+    0 & \mbox{ if $x \leq 0$.}
+  \end{cases}
+  \]
+  Is the graph of $f$ connected?  Is the function continuous?
+
+\end{problem}
+
+
+\end{document}
